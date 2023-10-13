@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import iconSubScribe from './components/icons/iconSubscribe.vue'
+import iconSubScribe from './components/icons/IconSubscribe.vue'
 </script>
 
 <template>

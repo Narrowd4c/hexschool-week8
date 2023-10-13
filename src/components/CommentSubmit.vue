@@ -1,5 +1,4 @@
 <script setup>
-
 import { useForm } from 'vee-validate'
 import * as yup from 'yup'
 
@@ -38,7 +37,6 @@ function submit() {
   if (Object.keys(errors.value).length == 0 && Object.keys(values).length != 0) {
     console.log('表單送出成功', values)
     postData(postUrl, values)
-
   } else {
     console.log('驗證錯誤', values, errors.value)
   }
@@ -46,7 +44,7 @@ function submit() {
 </script>
 
 <template>
-  <div class="container py-10 border-2 ">
+  <div class="container border-2 py-10">
     <main class="flex gap-20">
       <form action="" class="w-1/2 [&>*]:mb-4 [&_label]:mb-2 [&_label]:block">
         <label for="studentName">學生</label>

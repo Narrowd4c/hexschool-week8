@@ -13,10 +13,3 @@
 
 @tailwind components;
 @tailwind utilities;
-
-@layer utilities {
-    .bg-radial-center{
-        background:radial-gradient(50% 50% at center, var(--tw-gradient-stops));
-    }
-}
-
