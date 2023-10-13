@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;800;900&family=Shrikhand&display=swap');
+
+@tailwind base;
+
+@layer base {
+    html{
+        @apply bg-black;
+        font-family: 'Noto Sans TC', sans-serif;
+        @apply leading-normal;
+    }
+}
+
+
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .bg-radial-center{
+        background:radial-gradient(50% 50% at center, var(--tw-gradient-stops));
+    }
+}
+
