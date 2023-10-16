@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import iconSubScribe from './components/icons/IconSubscribe.vue'
+import Emergency from './components/icons/IconEmergency.vue'
 </script>
 
 <template>
@@ -21,13 +22,28 @@ import iconSubScribe from './components/icons/IconSubscribe.vue'
           <a
             href="#"
             class="flex items-center gap-1 rounded bg-white px-4 py-2 font-medium text-black"
-            ><iconSubScribe />訂閱</a
+            ><iconSubScribe class="fill-black" />訂閱</a
           >
         </li>
       </ul>
     </header>
   </div>
   <RouterView />
+  <footer class="bg-white">
+    <div class="container flex items-center justify-between py-12">
+      <div>
+        <p class="font-shrikhand text-3xl">ALPHABOX+</p>
+        <p class="tracking-widest">Copyright © 2023 Hexschool.</p>
+      </div>
+      <Emergency class="fill-black"></Emergency>
+      <ul class="flex gap-6">
+        <li><a href="#">關於我們</a></li>
+        <li><a href="#">產品資訊</a></li>
+        <li><a href="#">常見問題</a></li>
+        <li><a href="#">隱私政策</a></li>
+      </ul>
+    </div>
+  </footer>
 </template>
 
 <style></style>

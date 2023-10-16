@@ -1,15 +1,32 @@
+<script setup>
+import { ref } from 'vue';
+const props = defineProps({
+  spacing: Number,
+  width: Number,
+  pathId:String
+})
+const styleObj = ref({
+  'letter-spacing': props.spacing,
+  'transform':`translate(0, ${props.width/2}px)`
+})
+</script>
+
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    height="190px"
-    width="190px"
+    :width=width
+    :height=width
     style="overflow: visible"
   >
-    <path id="myTextPath" d="M 0 0 A 1 1 0 0 0 190 0 A 1 1 0 0 0 0 0 Z" fill="none" />
+    <path :id="pathId" :d="`M 0 0 A 1 1 0 0 0 ${width} 0 A 1 1 0 0 0 0 0 Z`" fill="none" />
 
-    <text fill="white" transform="translate(0,95)" style="letter-spacing: 24px">
-      <textPath xlink:href="#myTextPath">ALPHABOX+ALPHABOX+</textPath>
+    <text fill="white"  :style="styleObj">
+      <textPath :xlink:href="`#${pathId}`">ALPHABOX+ALPHABOX+</textPath>
     </text>
   </svg>
 </template>
+
+<style>
+
+</style>

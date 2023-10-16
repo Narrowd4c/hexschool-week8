@@ -17,9 +17,6 @@ export default {
         '3xl': ['2rem', 1.5],
         '6xl': ['4rem', 1.5]
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-      },
       fontFamily: {
         shrikhand: ['Shrikhand', 'cursive']
       },
